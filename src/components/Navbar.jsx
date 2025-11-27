@@ -12,7 +12,7 @@ const Navbar = () => {
             <p className='font-bold'>AlienO!d OS</p>
             <ul>
                 {navLinks. map(({id, name}) =>(
-                    <li key={id}><p>{name}</p></li>
+                    <li key={id} className="font-orbitron"><p>{name}</p></li>
                 ))}
             </ul>
         </div>

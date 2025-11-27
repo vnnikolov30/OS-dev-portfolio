@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Neuropol&family=Anurati&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap');
+
 
 @import "tailwindcss";
 
@@ -15,7 +19,10 @@ body {
 
 @theme {
   --font-georama: "Georama", sans-serif;
+  --font-orbitron: "Orbitron", sans-serif;
   --font-roboto: "Roboto Mono", monospace;
+  --font-zen-dots: "Zen Dots", cursive;
+  --font-firacode: "Fira Code", monospace;
   --breakpoint-3xl: 1920px;
 }
 
@@ -37,7 +44,7 @@ body {
   }
 
   nav {
-    @apply   flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5  select-none;
+    @apply   flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5  select-none rounded-b-lg;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;

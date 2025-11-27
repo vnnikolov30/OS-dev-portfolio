@@ -1,7 +1,6 @@
 import React from "react";
 import DitherBg from "./components/DitherBg";
-import Navbar from "./components/Navbar";
-
+import { Dock, Navbar, Welcome } from "#components";
 function App() {
   return (
     <main>
@@ -18,7 +17,8 @@ function App() {
         />
       </div>
       <Navbar />
-      
+      <Welcome />
+      <Dock />
     </main>
   );
 }
