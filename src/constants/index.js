@@ -43,9 +43,9 @@ const dockApps = [
     canOpen: true,
   },
   {
-    id: "safari",
-    name: "Articles", // was "Safari"
-    icon: "safari.png",
+    id: "browser",
+    name: "Hobbies", // was "Safari"
+    icon: "w-safari.png",
     canOpen: true,
   },
   {
@@ -77,44 +77,55 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    title: "Making Electronic Music",
+    description:
+      "I love creating electronic tracks under my alias Voohees. Experimenting with synths, beats, and layering sounds is my happy place — nothing beats finishing a track that really hits.",
+    image: "/images/music.png",
+    link: "#", // optional: link to your music
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    title: "Graphic Design & Artwork",
+    description:
+      "I design all my own artwork for my music and other projects. From album covers to visuals, I love experimenting with colors, shapes, and styles to make something that really feels like me.",
+    image: "/images/graphicdesign.jpg",
+    link: "#", // optional: portfolio link
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    title: "Game Development & Pixel Art",
+    description:
+      "I’ve been diving into game dev with Godot, and learning pixel art along the way. It’s been a lot of trial and error, but there’s nothing more satisfying than seeing your ideas come to life on screen.",
+    image: "/images/game-dev.png",
+    link: "#", // optional: link to your projects
   },
+
+  // {
+  //   id: 4,
+  //   title: "Playing Guitar",
+  //   description:
+  //     "Playing guitar is my way to unwind and explore melodies. I enjoy improvising riffs and occasionally blending it into my electronic music projects.",
+  //   image: "/images/guitar.png",
+  //   link: "#", // optional: link to recordings or videos
+  // },
 ];
 
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    items: ["React.js", "Next.js"],
   },
   {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    category: "Programing Languages",
+    items: ["JavaScript", "Python"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Tailwind CSS", "CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express"],
   },
   {
     category: "Database",
@@ -122,7 +133,7 @@ const techStack = [
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub", "Docker", "Postman"],
   },
 ];
 
@@ -497,6 +508,7 @@ const WINDOW_CONFIG = {
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  browser: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },

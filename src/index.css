@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Neuropol&family=Anurati&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&family=Zen+Dots&display=swap");
 
 @import "tailwindcss";
 
@@ -23,6 +21,7 @@ body {
   --font-roboto: "Roboto Mono", monospace;
   --font-zen-dots: "Zen Dots", cursive;
   --font-firacode: "Fira Code", monospace;
+  --font-vt323: "VT323", monospace;
   --breakpoint-3xl: 1920px;
 }
 
@@ -44,7 +43,13 @@ body {
   }
 
   nav {
-    @apply   flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5  select-none rounded-b-lg;
+    @apply flex justify-between items-center 
+         bg-black/10
+         backdrop-blur-2xl        
+         border-b border-gray-500 
+         shadow-[0_0_15px_rgba(0,255,100,0.7)] 
+         p-2 px-5 select-none 
+         rounded-b-lg;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
@@ -63,7 +68,7 @@ body {
     }
 
     time {
-      @apply text-sm font-medium text-black;
+      @apply text-sm font-medium text-white;
     }
   }
 }
@@ -89,7 +94,7 @@ body {
     @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
 
     .dock-container {
-      @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
+      @apply bg-black/50 backdrop-blur-2xl border-b border-gray-500/50 shadow-[0_0_15px_rgba(0,255,100,0.5)] justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
     }
 
     .tooltip {
@@ -122,14 +127,14 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-800 border-b border-gray-500 select-none text-sm text-gray-50;
   }
 
-  #safari {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+  #browser {
+    @apply w-4xl absolute top-30 left-2/12 bg-slate-700 shadow-2xl drop-shadow-2xl rounded-xl;
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+      @apply flex items-center gap-3 w-2/3 bg-gray-700 border border-gray-300 rounded-lg px-3 py-2;
 
       input {
         @apply placeholder:text-gray-400;
@@ -137,40 +142,36 @@ body {
     }
 
     .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto;
+      @apply bg-slate-700 p-20  mx-auto h-[80vh] overflow-y-auto;
 
       h2 {
         @apply text-xl font-bold text-pink-600 mb-10;
       }
 
       .blog-post {
-        @apply grid grid-cols-12 space-x-5;
+        @apply flex flex-col space-y-8 ; 
 
-        img {
-          @apply size-full rounded-md object-cover;
+        h3 {
+          @apply font-semibold text-base text-white mt-3;
         }
 
-        .content {
-          @apply col-span-10 space-y-3;
+        img {
+          @apply w-28 h-28 rounded-md object-cover; /* full width responsive */
+        }
 
-          p {
-            @apply text-xs text-gray-500;
-          }
+        p {
+          @apply text-xs text-gray-300;
+        }
 
-          h3 {
-            @apply font-semibold text-base text-gray-800;
-          }
-
-          a {
-            @apply text-blue-600 text-xs hover:underline flex items-center gap-3;
-          }
+        a {
+          @apply text-blue-600 text-xs hover:underline flex items-center gap-3;
         }
       }
     }
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply text-white w-xl absolute top-32 left-1/12 bg-black shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -401,3 +402,28 @@ body {
     }
   }
 }
+
+/* .preloader-screen {
+  @apply fixed inset-0 z-[9999] flex flex-col items-center justify-center 
+         bg-black text-[#88ffbb] transition-opacity duration-[500ms];
+}
+
+.preloader-log {
+  @apply mt-5 w-[300px] sm:w-[420px] text-xs sm:text-sm font-mono leading-relaxed opacity-90 text-left;
+}
+/* 
+/* ——— Cascading Log Type Effect ——— */
+/* .log-line {
+  animation: cascade 0.2s ease forwards;
+}
+
+@keyframes cascade {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}  */

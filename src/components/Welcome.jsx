@@ -79,7 +79,7 @@ const Welcome = () => {
       <h1 ref={titleRef} className="mt-7">
         {renderText("Digital World!", "text-8xl italic font-zen-dots")}
       </h1>
-      <p>🖖</p>
+      <p className="text-8xl">🖖</p>
       <div className="small-screen">
         s<p>This portfolio is designed for desktop/tablet screens only!!! </p>
       </div>
