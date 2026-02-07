@@ -3,7 +3,7 @@ import DitherBg from "./components/DitherBg";
 import { Dock, Navbar, Welcome } from "#components";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
-import { Browser, Terminal } from "#windows";
+import { Browser, Finder, Resume, Terminal } from "#windows";
 gsap.registerPlugin(Draggable);
 
 function App() {
@@ -28,7 +28,8 @@ function App() {
       <Dock />
       <Terminal />
       <Browser />
-      
+      <Resume />
+      <Finder />
     </main>
   );
 }
